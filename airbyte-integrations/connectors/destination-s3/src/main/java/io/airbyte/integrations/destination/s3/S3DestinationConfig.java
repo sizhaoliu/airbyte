@@ -52,14 +52,14 @@ public class S3DestinationConfig {
   }
 
   public S3DestinationConfig(final String endpoint,
-      final String bucketName,
-      final String bucketPath,
-      final String bucketRegion,
-      final String accessKeyId,
-      final String secretAccessKey,
-      final Integer partSize,
-      final S3FormatConfig formatConfig,
-      final AmazonS3 s3Client) {
+                             final String bucketName,
+                             final String bucketPath,
+                             final String bucketRegion,
+                             final String accessKeyId,
+                             final String secretAccessKey,
+                             final Integer partSize,
+                             final S3FormatConfig formatConfig,
+                             final AmazonS3 s3Client) {
     this.endpoint = endpoint;
     this.bucketName = bucketName;
     this.bucketPath = bucketPath;
@@ -72,13 +72,13 @@ public class S3DestinationConfig {
   }
 
   public S3DestinationConfig(final String endpoint,
-      final String bucketName,
-      final String bucketPath,
-      final String bucketRegion,
-      final String accessKeyId,
-      final String secretAccessKey,
-      final Integer partSize,
-      final S3FormatConfig formatConfig) {
+                             final String bucketName,
+                             final String bucketPath,
+                             final String bucketRegion,
+                             final String accessKeyId,
+                             final String secretAccessKey,
+                             final Integer partSize,
+                             final S3FormatConfig formatConfig) {
     this(endpoint, bucketName, bucketPath, bucketRegion, accessKeyId, secretAccessKey, partSize, formatConfig, null);
   }
 
@@ -141,7 +141,7 @@ public class S3DestinationConfig {
   }
 
   public AmazonS3 getS3Client() {
-    if(this.s3Client !=null) {
+    if (this.s3Client != null) {
       return this.s3Client;
     }
 
